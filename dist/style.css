@@ -52,11 +52,12 @@ body {
 .spinning{
     animation: rotate 3s linear infinite;
     font-size: 32px; 
-  }
+}
   
 @keyframes rotate{
     to{ transform: rotate(360deg); }
-  }
+}
+
 .datalist {
     min-height: 80px;
     display: flex;
