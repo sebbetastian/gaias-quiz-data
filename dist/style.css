@@ -57,7 +57,6 @@ body {
 @keyframes rotate{
     to{ transform: rotate(360deg); }
   }
-
 .datalist {
     min-height: 80px;
     display: flex;
