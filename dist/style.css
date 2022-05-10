@@ -1,0 +1,91 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.max-width {
+    width: 310px;
+}
+
+.font-size {
+    font-size: 1em;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.quiz-header-container {
+    text-align: center;
+    justify-self: center;
+    width: 100%;
+}
+
+#data, #data2, #data4, .quiz-header-container {
+    background-color: rgb(241, 241, 241);
+}
+
+.data-container {
+    margin: 20px auto;
+    display: grid;
+    grid-template-rows: auto;
+    justify-content: center;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+}
+
+.data-container p {
+    max-width: 90%;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.spinning{
+    animation: rotate 3s linear infinite;
+    font-size: 32px; 
+  }
+  
+@keyframes rotate{
+    to{ transform: rotate(360deg); }
+  }
+
+.datalist {
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#reload-btn {
+    height: 60px;
+    border: none;
+    z-index: 1000;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #427d93;
+    color: white;
+    transition: ease-in-out 0.3s;
+}
+
+#reload-btn:hover {
+    background-color: #1c7697;
+
+}
+
+@media only screen and (max-width: 300px) {
+    .max-width {
+        width: 100%;
+    }
+    .data-container p {
+        max-width: 100%;
+    }
+}
