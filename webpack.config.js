@@ -7,6 +7,6 @@ module.exports = {
     },
      output: {
       filename: '[name].bundle.js',
-       path: path.resolve(__dirname, 'quiz-data-pub v0.1'),
+       path: path.resolve(__dirname, 'quiz-data-pub'),
      },
    };

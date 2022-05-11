@@ -98,7 +98,7 @@ onValue(answers, (snapshot) => {
     [count["2,1"]] == false ? isTruNoYes = 0 : isTruNoYes = [count["2,1"]];
     const noSome = strongIndex(isTruNoYes) + ' - ' + ' har svart "dårlig" på spm 1, og "ja" på spm 2 👎🏻'
     addContent(el5, noSome);
-    
+
 });
 
 
