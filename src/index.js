@@ -89,11 +89,11 @@ onValue(answers, (snapshot) => {
     [count["2,1"]] == false ? isTruNoYes = 0 : isTruNoYes = [count["2,1"]];
 
     //basic innerHTML stuff😳
-    const numOfAns = strongIndex(isTru) +  ' - ' +' spillere har tatt denne quizen😁'
-    const yesBoth = strongIndex(isTruYes) + ' - ' + ' har svart ja på alle spørmsål!❤️'
-    const noBoth = strongIndex(isTruNo) + ' - ' + ' har svart nei på alle spørmsål!🤮'
-    const yesSome = strongIndex(isTruYesNo) + ' - ' + ' har svart ja på spm 1, og nei på spm 2👍🏻👎🏻'
-    const noSome = strongIndex(isTruNoYes) + ' - ' + ' har svart nei på spm 1, og ja på spm 2👎🏻👍🏻'
+    const numOfAns = strongIndex(isTru) +  ' - ' +' spillere har tatt denne quizen 😁'
+    const yesBoth = strongIndex(isTruYes) + ' - ' + ' har svart "bra" på spm 1, og "ja" på spm 2!❤️'
+    const noBoth = strongIndex(isTruNo) + ' - ' + ' har svart "dårlig" på spm 1 og "nei" på spm 2 🤷🏻‍♂️'
+    const yesSome = strongIndex(isTruYesNo) + ' - ' + ' har svart "bra" på spm 1, og "nei" på spm 2 🤷🏻‍♂️'
+    const noSome = strongIndex(isTruNoYes) + ' - ' + ' har svart "dårlig" på spm 1, og "ja" på spm 2 👎🏻'
 
     addContent(el, numOfAns);
     addContent(el2, yesBoth);
