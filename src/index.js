@@ -77,29 +77,28 @@ onValue(answers, (snapshot) => {
         }, {})
         counting = false;
     } 
-    //el.innerText = filtered2;
-    console.log([(count)])
-    //logging a double yes
-    console.log([count["2,2"]])
-    
+
+    //display data    
     count.answer == undefined ? isTru = 0 : isTru = count.answer;
-    [count["1,1"]] == false ? isTruYes = 0 : isTruYes = [count["1,1"]];
-    [count["2,2"]] == false ? isTruNo = 0 : isTruNo = [count["2,2"]];
-    [count["1,2"]] == false ? isTruYesNo = 0 : isTruYesNo = [count["1,2"]];
-    [count["2,1"]] == false ? isTruNoYes = 0 : isTruNoYes = [count["2,1"]];
-
-    //basic innerHTML stuff😳
     const numOfAns = strongIndex(isTru) +  ' - ' +' spillere har tatt denne quizen 😁'
-    const yesBoth = strongIndex(isTruYes) + ' - ' + ' har svart "bra" på spm 1, og "ja" på spm 2!❤️'
-    const noBoth = strongIndex(isTruNo) + ' - ' + ' har svart "dårlig" på spm 1 og "nei" på spm 2 🤷🏻‍♂️'
-    const yesSome = strongIndex(isTruYesNo) + ' - ' + ' har svart "bra" på spm 1, og "nei" på spm 2 🤷🏻‍♂️'
-    const noSome = strongIndex(isTruNoYes) + ' - ' + ' har svart "dårlig" på spm 1, og "ja" på spm 2 👎🏻'
-
     addContent(el, numOfAns);
+
+    [count["1,1"]] == false ? isTruYes = 0 : isTruYes = [count["1,1"]];
+    const yesBoth = strongIndex(isTruYes) + ' - ' + ' har svart "bra" på spm 1, og "ja" på spm 2!❤️'
     addContent(el2, yesBoth);
+
+    [count["2,2"]] == false ? isTruNo = 0 : isTruNo = [count["2,2"]];
+    const noBoth = strongIndex(isTruNo) + ' - ' + ' har svart "dårlig" på spm 1 og "nei" på spm 2 🤷🏻‍♂️'
     addContent(el3, noBoth);
+
+    [count["1,2"]] == false ? isTruYesNo = 0 : isTruYesNo = [count["1,2"]];
+    const yesSome = strongIndex(isTruYesNo) + ' - ' + ' har svart "bra" på spm 1, og "nei" på spm 2 🤷🏻‍♂️'
     addContent(el4, yesSome);
+
+    [count["2,1"]] == false ? isTruNoYes = 0 : isTruNoYes = [count["2,1"]];
+    const noSome = strongIndex(isTruNoYes) + ' - ' + ' har svart "dårlig" på spm 1, og "ja" på spm 2 👎🏻'
     addContent(el5, noSome);
+    
 });
 
 
