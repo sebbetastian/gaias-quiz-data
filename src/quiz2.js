@@ -15,6 +15,9 @@ const el2 = document.getElementById('data1');
 const el3 = document.getElementById('data2');
 const el4 = document.getElementById('data3');
 const el5 = document.getElementById('data4');
+const el11= document.getElementById('data11');
+const el12 = document.getElementById('data12');
+const el13 = document.getElementById('data13');
 const reloadBtn = document.getElementById('reload-btn');
 
 reloadBtn.addEventListener('click', () => {
@@ -25,11 +28,6 @@ reloadBtn.addEventListener('click', () => {
 let arr = [];
 let count = {};
 let counting = true;
-let isTru;
-let isTruYes;
-let isTruNo;
-let isTruYesNo;
-let isTruNoYes;
 
 function strongIndex(string) {
     return '<strong>' + string + '</strong>'
@@ -68,28 +66,4 @@ onValue(answers, (snapshot) => {
         }, {})
         counting = false;
     } 
-
-    //display data    
-    count.answer == undefined ? isTru = 0 : isTru = count.answer;
-    const numOfAns = strongIndex(isTru) +  ' - ' +' spillere😁'
-    addContent(el, numOfAns);
-
-    [count["1,1"]] == false ? isTruYes = 0 : isTruYes = [count["1,1"]];
-    const yesBoth = strongIndex(isTruYes) + ' - ' + ' har svart "bra", og "ja"!❤️'
-    addContent(el2, yesBoth);
-
-    [count["2,2"]] == false ? isTruNo = 0 : isTruNo = [count["2,2"]];
-    const noBoth = strongIndex(isTruNo) + ' - ' + ' har svart "dårlig", og "nei"🤷🏻‍♂️'
-    addContent(el3, noBoth);
-
-    [count["1,2"]] == false ? isTruYesNo = 0 : isTruYesNo = [count["1,2"]];
-    const yesSome = strongIndex(isTruYesNo) + ' - ' + ' har svart "bra", og "nei"🤷🏻‍♂️'
-    addContent(el4, yesSome);
-
-    [count["2,1"]] == false ? isTruNoYes = 0 : isTruNoYes = [count["2,1"]];
-    const noSome = strongIndex(isTruNoYes) + ' - ' + ' har svart "dårlig" og "ja"👎🏻'
-    addContent(el5, noSome);
-
-});
-
-
+})

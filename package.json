@@ -6,7 +6,7 @@
   "homepage": "https://sebbetastian.github.io/gaias-quiz-data/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "gh-pages -d quiz-data-pub" 
+    "deploy": "gh-pages -d dist" 
   },
   "author": "Sebastian Aanstad",
   "license": "ISC",

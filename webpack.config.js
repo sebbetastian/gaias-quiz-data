@@ -1,12 +1,9 @@
-const path = require('path');
-
 module.exports = {
-    mode: 'production',
-    entry: {
-      index: './src/index.js',
+    mode: 'development',
+    watch: true,
+    entry: ['./src/index.js', './src/firebase.js'],
+    output: {
+      filename: 'main.js',
+      path: __dirname + '/dist',
     },
-     output: {
-      filename: '[name].bundle.js',
-       path: path.resolve(__dirname, 'quiz-data-pub'),
-     },
-   };
+  };
