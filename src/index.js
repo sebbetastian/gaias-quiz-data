@@ -16,7 +16,7 @@ const el3 = document.getElementById('data2');
 const el4 = document.getElementById('data3');
 const el5 = document.getElementById('data4');
 const reloadBtn = document.getElementById('reload-btn');
-
+//"fetch data"
 reloadBtn.addEventListener('click', () => {
     location.reload();
 })
@@ -40,7 +40,7 @@ function addContent(el0, content) {
 }
 
 const db = getDatabase();
-//getting the first node in the database
+//getting the first node parent in the database
 const answers = (ref(db, 'answers/'));
 
 //getting the first node children from the node parent
