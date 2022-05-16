@@ -12,7 +12,12 @@
 }
 
 .underline {
-    text-decoration: underline;
+    margin: 0 auto;
+}
+
+.flex {
+    justify-content: center;
+    align-items: center;
 }
 
 body {
