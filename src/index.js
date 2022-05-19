@@ -3,7 +3,7 @@ import _ from 'lodash';
 //importing firebase
 import { initializeApp } from 'firebase/app';
 import { firebaseConfig } from './firebase';
-import { getDatabase, ref, onValue} from "firebase/database";
+import { getDatabase, ref, onValue, goOnline, goOffline} from "firebase/database";
 // Follow this pattern to import other Firebase services
 // import { } from 'firebase/<service>';
 
@@ -46,6 +46,7 @@ function sliceIntoChunks(arrs, chunkSize) {
 }
 
 const db = getDatabase();
+goOnline(db)
 //getting the first node parent in the database
 const answers = (ref(db, 'answers/'));
 
@@ -66,63 +67,62 @@ const answers = (ref(db, 'answers/'));
         })
     })
     if (counting == true) {
-        let countQOne1 = 0;
-        let countQOne2 = 0;
-        let countQOne3 = 0;
-        let countQOne4 = 0;
-
-        let countQTwo = 0;
-
-        let countQThree1 = 0;
-        let countQThree2 = 0;
-        let countQThree3 = 0;
-        let countQThree4 = 0;
-
-        let countQFour1 = 0;
-        let countQFour2 = 0;
-        let countQFour3 = 0;
-        let countQFour4 = 0;
-
-        let countQFive1 = 0;
-        let countQFive2 = 0;
+        //q1
+        let countQOne = [0, 0, 0, 0];
+        //q2
+        let countQTwo = [0];
+        //q3
+        let countQThree = [0, 0, 0, 0];
+        //q4
+        let countQFour = [0, 0, 0, 0, 0];
+        //q5
+        let countQFive = [0, 0];
         for (let i = 0; i < arr.length; i++) {
             const a = sliceIntoChunks(arr[i], 1)
             //q1
-            a[0] == 1 ? countQOne1 += 1 : countQOne1;
-            a[0] == 2 ? countQOne2 += 1 : countQOne2;
-            a[0] == 3 ? countQOne3 += 1 : countQOne3;
-            a[0] == 4 ? countQOne4 += 1 : countQOne4;
+            a[0] == 1 ? countQOne[0] += 1 : countQOne[0];
+            a[0] == 2 ? countQOne[1] += 1 : countQOne[1];
+            a[0] == 3 ? countQOne[2] += 1 : countQOne[2];
+            a[0] == 4 ? countQOne[3] += 1 : countQOne[3];
             //q2
-            a[1] == 1 ? countQTwo += 1 : countQTwo;
+            a[1] == 1 ? countQTwo[0] += 1 : countQTwo[0];
+            a[1] == 2 ? countQTwo[1] += 1 : countQTwo[1];
+            a[1] == 3 ? countQTwo[2] += 1 : countQTwo[2];
+            a[1] == 4 ? countQTwo[3] += 1 : countQTwo[3];
             //q3
-            a[2] == 1 ? countQThree1 += 1 : countQThree1;
-            a[2] == 2 ? countQThree2 += 1 : countQThree2;
-            a[2] == 3 ? countQThree3 += 1 : countQThree3;
-            a[2] == 4 ? countQThree4 += 1 : countQThree4;
+            a[2] == 1 ? countQThree[0] += 1 : countQThree[0];
+            a[2] == 2 ? countQThree[1] += 1 : countQThree[1];
+            a[2] == 3 ? countQThree[2] += 1 : countQThree[2];
+            a[2] == 4 ? countQThree[3] += 1 : countQThree[3];
             //q4
-            a[3] == 1 ? countQFour1 += 1 : countQFour1;
-            a[3] == 2 ? countQFour2 += 1 : countQFour2;
-            a[3] == 3 ? countQFour3 += 1 : countQFour3;
-            a[3] == 4 ? countQFour4 += 1 : countQFour4;
+            a[3] == 1 ? countQFour[0] += 1 : countQFour[0];
+            a[3] == 2 ? countQFour[1] += 1 : countQFour[1];
+            a[3] == 3 ? countQFour[2] += 1 : countQFour[2];
+            a[3] == 4 ? countQFour[3] += 1 : countQFour[3];
+            a[3] == 5 ? countQFour[4] += 1 : countQFour[4];
             //q5
-            a[4] == 1 ? countQFive1 += 1 : countQFive1;
-            a[4] == 2 ? countQFive2 += 1 : countQFive2;
+            a[4] == 1 ? countQFive[0] += 1 : countQFive[0];
+            a[4] == 2 ? countQFive[1] += 1 : countQFive[1];
+            a[4] == 3 ? countQFive[2] += 1 : countQFive[2];
+            a[4] == 4 ? countQFive[4] += 1 : countQFive[4];
         }
         //displaying the data
         arr.length == undefined ? isTru = 0 : isTru = arr.length;
         const numOfAns = strongIndex(isTru) +  ' - ' +' spillere😁'
         addContent(el, numOfAns);
-        const q1 = strongIndex(countQOne1) + ' veldig bra' + ' | ' + strongIndex(countQOne2) + ' Middels bra' + ' | ' + strongIndex(countQOne3) + ' Dårlig' + ' | ' + strongIndex(countQOne4) + ' Veldig dårlig.'
+        const q1 = strongIndex(countQOne[0]) + ' veldig bra' + ' | ' + strongIndex(countQOne[1]) + ' Middels bra' + ' | ' + strongIndex(countQOne[2]) + ' Dårlig' + ' | ' + strongIndex(countQOne[3]) + ' Veldig dårlig.'
         addContent(el2, q1);
         const q2 = strongIndex(countQTwo) + " kommer snart"
         addContent(el3, q2);
-        const q3 = strongIndex(countQThree1) + " Logiskt oppsett | " + strongIndex(countQThree2) + ' Jeg Skjønte delvis | ' + strongIndex(countQThree3) + ' Jeg var usikker på hvor det startet | ' + strongIndex(countQThree4) + ' Jeg savnet følgende: kommentar boks'
+        const q3 = strongIndex(countQThree[0]) + " Logiskt oppsett | " + strongIndex(countQThree[1]) + ' Jeg Skjønte delvis | ' + strongIndex(countQThree[2]) + ' Jeg var usikker på hvor det startet | ' + strongIndex(countQThree[3]) + ' Jeg savnet følgende: kommentar boks'
         addContent(el4, q3)
-        const q4 = strongIndex(countQFour1) + " Mer aktiviteter | " + strongIndex(countQFour2) + ' Flere spill | ' + strongIndex(countQFour3) + ' Mer historie | ' + strongIndex(countQFour4) + ' En guide'
+        const q4 = strongIndex(countQFour[0]) + " Mer aktiviteter | " + strongIndex(countQFour[1]) + ' Flere spill | ' + strongIndex(countQFour[2]) + ' Mer historie | ' + strongIndex(countQFour[3]) + ' En guide | ' + strongIndex(countQFour[4]) + ' Mer informasjonsmatriell'
         addContent(el5, q4)
-        const q5 = strongIndex(countQFive1) + " Ja | " + strongIndex(countQFive2) + ' Nei'
+        const q5 = strongIndex(countQFive[0]) + " Ja | " + strongIndex(countQFive[1]) + ' Nei'
         addContent(el6, q5)
         counting = false;
+        goOffline(db)
     }
 });
+
 
