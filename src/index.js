@@ -74,7 +74,7 @@ const db = getDatabase();
 const answers = (ref(db, 'answers/'));
 
 //getting the first node children from the node parent
-onValue(answers, (snapshot) => {
+    onValue(answers, (snapshot) => {
     //giving each id node from answers one childKey const
     snapshot.forEach((childSnapshot) => {
         const childKey = childSnapshot.key;
@@ -90,68 +90,71 @@ onValue(answers, (snapshot) => {
             })
         })
     })
-
-    for (let k = 0; k < arr.length; k++) {
-        j = sliceIntoChunks(arr[k], 1)
-        if (j[0] == 1) {
-            countQOne1 += 1;
+    
+    if (counting == true) {
+        for (let k = 0; k < arr.length; k++) {
+            j = sliceIntoChunks(arr[k], 1)
+            if (j[0] == 1) {
+                countQOne1 += 1;
+            }
+            if (j[0] != 1) {
+                countQOne2 += 1
+            }
+            if (j[0] == 3) {
+                countQOne3 += 1
+            }
+            if (j[0] == 4) {
+                countQOne4 += 1
+            }
+            if (j[1] == 1) {
+                countQTwo += 1
+            }
+            if (j[2] == 1) {
+                countQThree1 += 1;
+            }
+            if (j[2] == 2) {
+                countQThree2 += 1;
+            }
+            if (j[2] == 3) {
+                countQThree3 += 1;
+            }
+            if (j[2] == 4) {
+                countQThree4 += 1;
+            }
+            if (j[3] == 1) {
+                countQFour1 += 1;
+            }
+            if (j[3] == 2) {
+                countQFour2 += 1;
+            }
+            if (j[3] == 3) {
+                countQFour3 += 1;
+            }
+            if (j[3] == 4) {
+                countQFour4 += 1;
+            }
+            if (j[4] == 1) {
+                countQFive1 += 1;
+            }
+            if (j[4] == 2) {
+                countQFive2 += 1;
+            }
         }
-        if (j[0] != 1) {
-            countQOne2 += 1
-        }
-        if (j[0] == 3) {
-            countQOne3 += 1
-        }
-        if (j[0] == 4) {
-            countQOne4 += 1
-        }
-        if (j[1] == 1) {
-            countQTwo += 1
-        }
-        if (j[2] == 1) {
-            countQThree1 += 1;
-        }
-        if (j[2] == 2) {
-            countQThree2 += 1;
-        }
-        if (j[2] == 3) {
-            countQThree3 += 1;
-        }
-        if (j[2] == 4) {
-            countQThree4 += 1;
-        }
-        if (j[3] == 1) {
-            countQFour1 += 1;
-        }
-        if (j[3] == 2) {
-            countQFour2 += 1;
-        }
-        if (j[3] == 3) {
-            countQFour3 += 1;
-        }
-        if (j[3] == 4) {
-            countQFour4 += 1;
-        }
-        if (j[4] == 1) {
-            countQFive1 += 1;
-        }
-        if (j[4] == 2) {
-            countQFive1 += 1;
-        }
+        arr.length == undefined ? isTru = 0 : isTru = arr.length;
+        const numOfAns = strongIndex(isTru) +  ' - ' +' spillere😁'
+        addContent(el, numOfAns);
+        counting = false;
     }
 
     //counts all the answers that match, and returns them to the count object
-    if (counting == true) {
+    /*if (counting == true) {
         count = arr.reduce((accumulator, value) => {
             return {...accumulator, [value]: (accumulator[value] || 0) + 1};
         }, {})
         counting = false;
-    } 
+    } */
 
     //display data    
-    arr.length == undefined ? isTru = 0 : isTru = arr.length;
-    const numOfAns = strongIndex(isTru) +  ' - ' +' spillere😁'
-    addContent(el, numOfAns);
 
     //[count["1,1"]]  //  [count["1,1"]]
 
@@ -172,3 +175,4 @@ onValue(answers, (snapshot) => {
     const q5 = strongIndex(countQFive1) + " Ja | " + strongIndex(countQFive2) + ' Nei'
     addContent(el6, q5)
 });
+
