@@ -4,9 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="stylesheets/globals.css">
+  <link rel="stylesheet" href="stylesheets/typography.css">
+  <link rel="stylesheet" href="stylesheets/grid.css">
+  <!--<link rel="stylesheet" href="stylesheets/ui.css">-->
+  <!--<link rel="stylesheet" href="stylesheets/forms.css">-->
+  <link rel="stylesheet" href="stylesheets/orbit.css">
+  <!--<link rel="stylesheet" href="stylesheets/reveal.css">-->
+  <!--<link rel="stylesheet" href="stylesheets/mobile.css">-->
+  <!-- End Combine and Compress These CSS Files -->
+  <link rel="stylesheet" href="stylesheets/app.css">
+	<link rel="stylesheet" href="responsive-tables.css">
+	<script src="javascripts/jquery.min.js"></script>
+	<script src="responsive-tables.js"></script>
     <title>Gaias Quiz Data</title>
 </head>
+<!--
 <body>
     <div class="data-container max-width">
         <div class="quiz-header-container">
@@ -26,8 +40,58 @@
         <div class="datalist" id="data2"><div class="spinning">⚙︎</div></div>
         <div class="datalist" id="data3"><div class="spinning">⚙︎</div></div>
         <div class="datalist" id="data4"><div class="spinning">⚙︎</div></div>
-        <button id="reload-btn" class='font-size max-width'>Hent Data</button>
         <script src="main.js"></script>
     </div>
 </body>
+-->
+
+<div id="description">
+    <h3>Quiz Data</h3>
+</div>
+
+<footer>
+    <table class="responsive">
+        <tbody>
+          <tr>
+            <th>Gaias Quiz</th>
+            <th id="data"><div class="spinning">⚙︎ - spillere😁</div></th>
+            <th>Svar alternativer:</th>
+            <th>Antall svar:</th>
+          </tr>
+          <tr>
+            <td>Spm 1</td>
+            <td>Hvordan vil du kategorisere totalopplevelsen</td>
+            <td>Veldig bra | Middels bra | Dårlig | Veldig dårlig</td>
+            <td id="data1"><div class="spinning">⚙︎ Veldig bra | ⚙︎ middels bra | ⚙︎ Dårlig | ⚙︎ Veldig dårlig.</div></td>
+          </tr>
+          <tr>
+            <td>Spm 2</td>
+            <td>Hva likte du best i utstillingen?</td>
+            <td>kommer snart</td>
+            <td id="data2"><div class="spinning">⚙︎ kommer snart.</div></td>
+          </tr>
+          <tr>
+            <td>Spm 3</td>
+            <td>Viste du hvor du skulle gå?</td>
+            <td>Logiskt oppsett | Jeg skjønte delvis | Jeg var usikker på hvor det startet | Jeg savnet følgende: kommentar boks</td>
+            <td id="data3">⚙︎ Logiskt oppsett | ⚙︎ Jeg skjønte delvis | ⚙︎ Jeg var usikker på hvor det startet | ⚙︎ jeg savnet følgende: kommentar boks</td>
+          </tr>
+          <tr>
+            <td>Spm 4</td>
+            <td>Hva savnet du i utstillingen til Gaia Vesterålen?</td>
+            <td>Mer aktiviteter | Flere spill | Mer historie | En guide</td>
+            <td id="data4">⚙︎ Mer aktiviteter | ⚙︎ Flere spill | ⚙︎ Mer historie | ⚙︎ En guide</td>
+          </tr>
+          <tr>
+            <td>Spm 5</td>
+            <td>Ville du likt å kjøpe souvenirer fra utstillingen</td>
+            <td>Ja | Nei</td>
+            <td id="data5">⚙︎ Ja | ⚙︎ Nei</td>
+          </tr>
+        </tbody>
+      </table>
+      <button id="reload-btn" class='font-size max-width button'>Hent Data</button>
+      <script src="main.js"></script>
+</footer>
 </html>
+
