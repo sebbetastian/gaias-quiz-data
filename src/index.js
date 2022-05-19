@@ -97,7 +97,7 @@ const answers = (ref(db, 'answers/'));
             if (j[0] == 1) {
                 countQOne1 += 1;
             }
-            if (j[0] != 1) {
+            if (j[0] == 2) {
                 countQOne2 += 1
             }
             if (j[0] == 3) {
