@@ -1,0 +1,66 @@
+/* Artfully masterminded by ZURB  */
+
+/* -------------------------------------------------- 
+   Table of Contents
+-----------------------------------------------------
+:: Shared Styles
+:: Page Name 1
+:: Page Name 2
+*/
+
+
+/* -----------------------------------------
+   Shared Styles
+----------------------------------------- */
+
+  html {
+   text-align: center;
+  }
+
+  body { background: #f4f4f4; height: 100vh; }
+  .container { max-width: 740px; box-shadow: 0px 2px 5px rgba(0,0,0,0.25); background: #fff; margin: 0 auto; }
+  
+  p { color: #999; }
+  
+  h1 { margin: 20px 0 0; }
+  h4.subhead { font-weight: lighter; color: #777; margin-bottom: 20px; }
+  
+  pre { -moz-border-radius: 5px; border-radius: 5px; -webkit-border-radius: 5px; margin: 0; display: block; font: 11px Monaco, monospace !important; padding: 15px; background-color: #1C1C1C; overflow: auto; color: #D0D0D0; line-height: 125%; margin-bottom: 30px; }
+
+  footer {
+   display: grid;
+   justify-content: center;
+  }
+
+/* -----------------------------------------
+   Page Name 1
+----------------------------------------- */
+
+#description {
+   margin: 20px;
+}
+
+#reload-btn {
+   height: 40px;
+   border: none;
+   z-index: 1000;
+   border-radius: 4px;
+   cursor: pointer;
+   background-color: #427d93;
+   color: white;
+   transition: ease-in-out 0.3s;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#reload-btn:hover {
+   background-color: #1c7697;
+   box-shadow: none;
+}
+
+
+
+/* -----------------------------------------
+   Page Name 2
+----------------------------------------- */
+
+
