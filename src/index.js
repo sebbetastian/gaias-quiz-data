@@ -70,6 +70,7 @@ const answers = (ref(db, 'answers/'));
         let countQOne = [0, 0, 0, 0, 0];
         for (let i = 0; i < arr.length; i++) {
             const a = sliceIntoChunks(arr[i], 1)
+            console.log(a);
             //q1
             a[0] == 1 ? countQOne[0] += 1 : 0;
             a[0] == 2 ? countQOne[1] += 1 : 0;
@@ -141,11 +142,11 @@ const answers = (ref(db, 'answers/'));
         for (let i = 0; i < arr.length; i++) {
             const a = sliceIntoChunks(arr[i], 1)
             //q1
-            a[5] == 1 ? countQFive[0] += 1 : 0;
-            a[5] == 2 ? countQFive[1] += 1 : 0;
-            a[5] == 3 ? countQFive[2] += 1 : 0;
-            a[5] == 4 ? countQFive[3] += 1 : 0;
-            a[5] == 5 ? countQFive[4] += 1 : 0;
+            a[5] == 1 ? countQSix[0] += 1 : 0;
+            a[5] == 2 ? countQSix[1] += 1 : 0;
+            a[5] == 3 ? countQSix[2] += 1 : 0;
+            a[5] == 4 ? countQSix[3] += 1 : 0;
+            a[5] == 5 ? countQSix[4] += 1 : 0;
         }
         const q6 = strongIndex(countQSix[0]) + " ... | " + strongIndex(countQSix[1]) + ' ...'
         const el7 = document.getElementById('data6');
@@ -155,11 +156,11 @@ const answers = (ref(db, 'answers/'));
         for (let i = 0; i < arr.length; i++) {
             const a = sliceIntoChunks(arr[i], 1)
             //q1
-            a[6] == 1 ? countQSix[0] += 1 : 0;
-            a[6] == 2 ? countQSix[1] += 1 : 0;
-            a[6] == 3 ? countQSix[2] += 1 : 0;
-            a[6] == 4 ? countQSix[3] += 1 : 0;
-            a[6] == 5 ? countQSix[4] += 1 : 0;
+            a[6] == 1 ? countQSeven[0] += 1 : 0;
+            a[6] == 2 ? countQSeven[1] += 1 : 0;
+            a[6] == 3 ? countQSeven[2] += 1 : 0;
+            a[6] == 4 ? countQSeven[3] += 1 : 0;
+            a[6] == 5 ? countQSeven[4] += 1 : 0;
         }
         const q7 = strongIndex(countQSeven[0]) + " ... | " + strongIndex(countQSeven[1]) + ' ...'
         const el8 = document.getElementById('data7');
@@ -169,11 +170,11 @@ const answers = (ref(db, 'answers/'));
         for (let i = 0; i < arr.length; i++) {
             const a = sliceIntoChunks(arr[i], 1)
             //q1
-            a[7] == 1 ? countQSeven[0] += 1 : 0;
-            a[7] == 2 ? countQSeven[1] += 1 : 0;
-            a[7] == 3 ? countQSeven[2] += 1 : 0;
-            a[7] == 4 ? countQSeven[3] += 1 : 0;
-            a[7] == 5 ? countQSeven[4] += 1 : 0;
+            a[7] == 1 ? countQEight[0] += 1 : 0;
+            a[7] == 2 ? countQEight[1] += 1 : 0;
+            a[7] == 3 ? countQEight[2] += 1 : 0;
+            a[7] == 4 ? countQEight[3] += 1 : 0;
+            a[7] == 5 ? countQEight[4] += 1 : 0;
         }
         const q8 = strongIndex(countQEight[0]) + " ... | " + strongIndex(countQEight[1]) + ' ...'
         const el9 = document.getElementById('data8');
@@ -183,11 +184,11 @@ const answers = (ref(db, 'answers/'));
         for (let i = 0; i < arr.length; i++) {
             const a = sliceIntoChunks(arr[i], 1)
             //q1
-            a[8] == 1 ? countQEight[0] += 1: 0;
-            a[8] == 2 ? countQEight[1] += 1: 0;
-            a[8] == 3 ? countQEight[2] += 1: 0;
-            a[8] == 4 ? countQEight[3] += 1: 0;
-            a[8] == 5 ? countQEight[4] += 1: 0;
+            a[8] == 1 ? countQNine[0] += 1: 0;
+            a[8] == 2 ? countQNine[1] += 1: 0;
+            a[8] == 3 ? countQNine[2] += 1: 0;
+            a[8] == 4 ? countQNine[3] += 1: 0;
+            a[8] == 5 ? countQNine[4] += 1: 0;
         }
         const q9 = strongIndex(countQNine[0]) + " ... | " + strongIndex(countQNine[1]) + ' ...'
         const el10 = document.getElementById('data9');
@@ -197,11 +198,11 @@ const answers = (ref(db, 'answers/'));
         for (let i = 0; i < arr.length; i++) {
             const a = sliceIntoChunks(arr[i], 1)
             //q1
-            a[9] == 1 ? countQNine[0] += 1 : 0;
-            a[9] == 2 ? countQNine[1] += 1 : 0;
-            a[9] == 3 ? countQNine[2] += 1 : 0;
-            a[9] == 4 ? countQNine[3] += 1 : 0;
-            a[9] == 5 ? countQNine[4] += 1 : 0;
+            a[9] == 1 ? countQTen[0] += 1 : 0;
+            a[9] == 2 ? countQTen[1] += 1 : 0;
+            a[9] == 3 ? countQTen[2] += 1 : 0;
+            a[9] == 4 ? countQTen[3] += 1 : 0;
+            a[9] == 5 ? countQTen[4] += 1 : 0;
         }
         const q10 = strongIndex(countQTen[0]) + " ... | " + strongIndex(countQTen[1]) + ' ...'
         const el11 = document.getElementById('data10');
