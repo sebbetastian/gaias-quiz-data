@@ -69,22 +69,6 @@ body {
     justify-content: center;
 }
 
-#reload-btn {
-    height: 60px;
-    border: none;
-    z-index: 1000;
-    border-radius: 4px;
-    cursor: pointer;
-    background-color: #427d93;
-    color: white;
-    transition: ease-in-out 0.3s;
-}
-
-#reload-btn:hover {
-    background-color: #1c7697;
-
-}
-
 @media only screen and (max-width: 300px) {
     .max-width {
         width: 100%;
