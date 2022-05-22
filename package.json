@@ -6,11 +6,12 @@
   "homepage": "https://sebbetastian.github.io/gaias-quiz-data/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "gh-pages -d dist" 
+    "deploy": "gh-pages -d dist"
   },
   "author": "Sebastian Aanstad",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^3.4.1",
     "firebase": "^9.7.0",
     "lodash": "^4.17.21",
     "webpack": "^5.72.0",
